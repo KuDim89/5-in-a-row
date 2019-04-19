@@ -1,5 +1,8 @@
 //Common style
 
+@import "../utils/mixins";
+@import "../utils/vars";
+
 html {
   line-height: $mainLineHeight;
   font-size: $mainFontSize;
@@ -63,21 +66,14 @@ section, .section {
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  //min-height: 100vh;
 }
 
 .container {
   width: 100%;
   flex: 0 0 auto;
   position: relative;
-  max-width: $desktopWidth;
+  max-width: $tableWidth;
   margin: 0 auto;
-  @media screen and (max-width: $smDesktopWidth){
-    max-width: $tableWidth;
-  }
-  @media screen and (max-width: $tableWidth){
-    max-width: $phoneWidth;
-  }
   @media screen and (max-width: $phoneWidth){
     max-width: $smPhoneWidth;
   }

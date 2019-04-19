@@ -1,9 +1,11 @@
 @import "vars";
+@import "../utils/mixins";
+@import "../utils/fonts";
 @import "animate";
 
 .btn-default {
   @include fontMontserrat(400, normal);
-  @include font-size(18);
+  @include fontSize(18);
   border: 2px solid $default-color;
   border-radius: $button-height / 2;
   padding: rem(5) rem(20);
