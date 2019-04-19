@@ -15,5 +15,5 @@ footer {
 
 .footer-thanks {
   @include fontMontserrat(400, normal);
-  @include font-size(16);
+  @include fontSize(16);
 }
