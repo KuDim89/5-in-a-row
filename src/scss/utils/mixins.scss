@@ -22,3 +22,8 @@
   ::-moz-placeholder {@content}
   :-ms-input-placeholder {@content}
 }
+
+@mixin font-size($sizeValue, $line: $sizeValue * 1.5) {
+  font-size: ($sizeValue / $standardFontSize) * 1rem;
+  line-height: ($sizeValue * 1.5) /$standardFontSize * 1rem;
+}

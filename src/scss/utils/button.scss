@@ -1,0 +1,21 @@
+@import "vars";
+@import "animate";
+
+.btn-default {
+  @include fontMontserrat(400, normal);
+  @include font-size(18);
+  border: 2px solid $default-color;
+  border-radius: $button-height / 2;
+  padding: rem(5) rem(20);
+  color: $default-color;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #d2691e, #FFD019, #FF5219, #F5557F, #d2691e);
+  background-size: 500%;
+  &:hover {
+    animation: buttonHoverAnimate 8s linear infinite;
+    box-shadow: 2px 13px 17px -14px rgba(0,0,0,0.5);
+  }
+  &:active {
+    box-shadow: none;
+  }
+}

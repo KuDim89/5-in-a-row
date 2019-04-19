@@ -1,1 +1,21 @@
 //Header style
+@import "../utils/mixins";
+@import "../utils/fonts";
+@import "../utils/vars";
+
+header {
+  background-color: $primary-color;
+  box-shadow: 2px 13px 17px -14px rgba(0,0,0,0.5);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: rem(500);
+  margin: 0 auto;
+}
+.header-title {
+  @include fontChina(400, normal);
+  @include font-size(50);
+}
+

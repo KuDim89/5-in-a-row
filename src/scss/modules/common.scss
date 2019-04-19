@@ -56,14 +56,14 @@ section, .section {
 .wrapper{
   display: flex;
   flex-direction: column;
-  min-width: 100vh;
+  min-width: 100vw;
   margin: 0 auto;
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  //min-height: 100vh;
 }
 
 .container {
