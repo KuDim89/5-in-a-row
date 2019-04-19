@@ -23,7 +23,23 @@
   :-ms-input-placeholder {@content}
 }
 
-@mixin font-size($sizeValue, $line: $sizeValue * 1.5) {
+@mixin fontSize($sizeValue, $line: $sizeValue * 1.5) {
   font-size: ($sizeValue / $standardFontSize) * 1rem;
   line-height: ($sizeValue * 1.5) /$standardFontSize * 1rem;
+}
+
+@mixin flexRow($horizontal, $vertical) {
+  display: flex;
+  justify-content: $horizontal;
+  flex-wrap: wrap;
+  align-items: $vertical;
+}
+
+@mixin calcCol($count, $margin) {
+  width: calc(#{(100 / $count) + unquote("%")} - #{$margin / 2});
+}
+
+@mixin verticalAlign() {
+  top: 50%;
+  transform: translateY(-50%);
 }

@@ -7,15 +7,12 @@ header {
   background-color: $primary-color;
   box-shadow: 2px 13px 17px -14px rgba(0,0,0,0.5);
 }
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: rem(500);
-  margin: 0 auto;
+.header-wrapper {
+  @include flexRow(space-between, center);
+  padding: 0 rem(80);
 }
 .header-title {
   @include fontChina(400, normal);
-  @include font-size(50);
+  @include fontSize(50);
 }
 
