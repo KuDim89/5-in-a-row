@@ -10,4 +10,4 @@ import './scss/main.scss'
 //General libraries
 //import 'jquery'
 //import jQquery from 'jquery'
-window.jquery = require('jquery/dist/jquery');
+//window.jquery = require('jquery/dist/jquery');
