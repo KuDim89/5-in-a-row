@@ -8,7 +8,6 @@
     <title>Webpack</title>
 </head>
 <body>
-    <!-- main wrapper -->
     <div class="wrapper">
         <div id="app">
             <header>
@@ -19,17 +18,310 @@
                     </div>
                 </div>
             </header>
-            <div class="content-wrapper"><!-- wrapper for content -->
-                <section id="main"><!-- example section -->
+            <div class="content-wrapper" style="background-image: url(assets/img/ornament.jpg)">
+                <section class="game">
                     <div class="container">
-                        <h1>Webpack</h1>
+                        <div class="game-wrapper">
+                            <div class="game-menu">
+                                <div class="game-menu-btn">
+                                    <a class="btn-menu" href="#" data-value="5">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        5 x 5
+                                    </a>
+                                    <a class="btn-menu" href="#" data-value="10">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        10 x 10</a>
+                                    <a class="btn-menu" href="#" data-value="15">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        15 x 15</a>
+                                </div>
+                                <div class="game-menu-count">
+                                    <div class="count-black">
+                                        <figure class="count-black-icon"></figure>
+                                        <div class="count-black-value">380</div>
+                                    </div>
+                                    <div class="count-white">
+                                        <figure class="count-white-icon"></figure>
+                                        <div class="count-white-value">1230</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game-field" >
+                                <div class="board">
+<!--                                    <div class="row">-->
+<!--                                        <div class="col black"></div>-->
+<!--                                        <div class="col white"></div>-->
+<!--                                        <div class="col">3</div>-->
+<!--                                        <div class="col">4</div>-->
+<!--                                        <div class="col">5</div>-->
+<!--                                        <div class="col">6</div>-->
+<!--                                        <div class="col">7</div>-->
+<!--                                        <div class="col">8</div>-->
+<!--                                        <div class="col">9</div>-->
+<!--                                        <div class="col">10</div>-->
+<!--                                        <div class="col">11</div>-->
+<!--                                        <div class="col">12</div>-->
+<!--                                        <div class="col">13</div>-->
+<!--                                        <div class="col">14</div>-->
+<!--                                        <div class="col">15</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">16</div>-->
+<!--                                        <div class="col">17</div>-->
+<!--                                        <div class="col">18</div>-->
+<!--                                        <div class="col">19</div>-->
+<!--                                        <div class="col">20</div>-->
+<!--                                        <div class="col">21</div>-->
+<!--                                        <div class="col">22</div>-->
+<!--                                        <div class="col">23</div>-->
+<!--                                        <div class="col">24</div>-->
+<!--                                        <div class="col">25</div>-->
+<!--                                        <div class="col">26</div>-->
+<!--                                        <div class="col">27</div>-->
+<!--                                        <div class="col">28</div>-->
+<!--                                        <div class="col">29</div>-->
+<!--                                        <div class="col">30</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">31</div>-->
+<!--                                        <div class="col">32</div>-->
+<!--                                        <div class="col">33</div>-->
+<!--                                        <div class="col">34</div>-->
+<!--                                        <div class="col">35</div>-->
+<!--                                        <div class="col">36</div>-->
+<!--                                        <div class="col">37</div>-->
+<!--                                        <div class="col">38</div>-->
+<!--                                        <div class="col">39</div>-->
+<!--                                        <div class="col">40</div>-->
+<!--                                        <div class="col">41</div>-->
+<!--                                        <div class="col">42</div>-->
+<!--                                        <div class="col">43</div>-->
+<!--                                        <div class="col">44</div>-->
+<!--                                        <div class="col">45</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">46</div>-->
+<!--                                        <div class="col">47</div>-->
+<!--                                        <div class="col">48</div>-->
+<!--                                        <div class="col">49</div>-->
+<!--                                        <div class="col">50</div>-->
+<!--                                        <div class="col">51</div>-->
+<!--                                        <div class="col">52</div>-->
+<!--                                        <div class="col">53</div>-->
+<!--                                        <div class="col">54</div>-->
+<!--                                        <div class="col">55</div>-->
+<!--                                        <div class="col">56</div>-->
+<!--                                        <div class="col">57</div>-->
+<!--                                        <div class="col">58</div>-->
+<!--                                        <div class="col">59</div>-->
+<!--                                        <div class="col">60</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">61</div>-->
+<!--                                        <div class="col">62</div>-->
+<!--                                        <div class="col">63</div>-->
+<!--                                        <div class="col">64</div>-->
+<!--                                        <div class="col">65</div>-->
+<!--                                        <div class="col">66</div>-->
+<!--                                        <div class="col">67</div>-->
+<!--                                        <div class="col">68</div>-->
+<!--                                        <div class="col">69</div>-->
+<!--                                        <div class="col">70</div>-->
+<!--                                        <div class="col">71</div>-->
+<!--                                        <div class="col">72</div>-->
+<!--                                        <div class="col">73</div>-->
+<!--                                        <div class="col">74</div>-->
+<!--                                        <div class="col">75</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">76</div>-->
+<!--                                        <div class="col">77</div>-->
+<!--                                        <div class="col">78</div>-->
+<!--                                        <div class="col">79</div>-->
+<!--                                        <div class="col">80</div>-->
+<!--                                        <div class="col">81</div>-->
+<!--                                        <div class="col">82</div>-->
+<!--                                        <div class="col">83</div>-->
+<!--                                        <div class="col">84</div>-->
+<!--                                        <div class="col">85</div>-->
+<!--                                        <div class="col">86</div>-->
+<!--                                        <div class="col">87</div>-->
+<!--                                        <div class="col">88</div>-->
+<!--                                        <div class="col">89</div>-->
+<!--                                        <div class="col">90</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">91</div>-->
+<!--                                        <div class="col">92</div>-->
+<!--                                        <div class="col">93</div>-->
+<!--                                        <div class="col">94</div>-->
+<!--                                        <div class="col">95</div>-->
+<!--                                        <div class="col">96</div>-->
+<!--                                        <div class="col">97</div>-->
+<!--                                        <div class="col">98</div>-->
+<!--                                        <div class="col">99</div>-->
+<!--                                        <div class="col">100</div>-->
+<!--                                        <div class="col">101</div>-->
+<!--                                        <div class="col">102</div>-->
+<!--                                        <div class="col">103</div>-->
+<!--                                        <div class="col">104</div>-->
+<!--                                        <div class="col">105</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">106</div>-->
+<!--                                        <div class="col">107</div>-->
+<!--                                        <div class="col">108</div>-->
+<!--                                        <div class="col">109</div>-->
+<!--                                        <div class="col">110</div>-->
+<!--                                        <div class="col">111</div>-->
+<!--                                        <div class="col">112</div>-->
+<!--                                        <div class="col">113</div>-->
+<!--                                        <div class="col">114</div>-->
+<!--                                        <div class="col">115</div>-->
+<!--                                        <div class="col">116</div>-->
+<!--                                        <div class="col">117</div>-->
+<!--                                        <div class="col">118</div>-->
+<!--                                        <div class="col">119</div>-->
+<!--                                        <div class="col">120</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">121</div>-->
+<!--                                        <div class="col">122</div>-->
+<!--                                        <div class="col">123</div>-->
+<!--                                        <div class="col">124</div>-->
+<!--                                        <div class="col">125</div>-->
+<!--                                        <div class="col">126</div>-->
+<!--                                        <div class="col">127</div>-->
+<!--                                        <div class="col">128</div>-->
+<!--                                        <div class="col">129</div>-->
+<!--                                        <div class="col">130</div>-->
+<!--                                        <div class="col">131</div>-->
+<!--                                        <div class="col">132</div>-->
+<!--                                        <div class="col">133</div>-->
+<!--                                        <div class="col">134</div>-->
+<!--                                        <div class="col">135</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">136</div>-->
+<!--                                        <div class="col">137</div>-->
+<!--                                        <div class="col">138</div>-->
+<!--                                        <div class="col">139</div>-->
+<!--                                        <div class="col">140</div>-->
+<!--                                        <div class="col">141</div>-->
+<!--                                        <div class="col">142</div>-->
+<!--                                        <div class="col">143</div>-->
+<!--                                        <div class="col">144</div>-->
+<!--                                        <div class="col">145</div>-->
+<!--                                        <div class="col">146</div>-->
+<!--                                        <div class="col">147</div>-->
+<!--                                        <div class="col">148</div>-->
+<!--                                        <div class="col">149</div>-->
+<!--                                        <div class="col">150</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">151</div>-->
+<!--                                        <div class="col">152</div>-->
+<!--                                        <div class="col">153</div>-->
+<!--                                        <div class="col">154</div>-->
+<!--                                        <div class="col">155</div>-->
+<!--                                        <div class="col">156</div>-->
+<!--                                        <div class="col">157</div>-->
+<!--                                        <div class="col">158</div>-->
+<!--                                        <div class="col">159</div>-->
+<!--                                        <div class="col">160</div>-->
+<!--                                        <div class="col">161</div>-->
+<!--                                        <div class="col">162</div>-->
+<!--                                        <div class="col">163</div>-->
+<!--                                        <div class="col">164</div>-->
+<!--                                        <div class="col">165</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">166</div>-->
+<!--                                        <div class="col">167</div>-->
+<!--                                        <div class="col">168</div>-->
+<!--                                        <div class="col">169</div>-->
+<!--                                        <div class="col">170</div>-->
+<!--                                        <div class="col">171</div>-->
+<!--                                        <div class="col">172</div>-->
+<!--                                        <div class="col">173</div>-->
+<!--                                        <div class="col">174</div>-->
+<!--                                        <div class="col">175</div>-->
+<!--                                        <div class="col">176</div>-->
+<!--                                        <div class="col">177</div>-->
+<!--                                        <div class="col">178</div>-->
+<!--                                        <div class="col">179</div>-->
+<!--                                        <div class="col">180</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">181</div>-->
+<!--                                        <div class="col">182</div>-->
+<!--                                        <div class="col">183</div>-->
+<!--                                        <div class="col">184</div>-->
+<!--                                        <div class="col">185</div>-->
+<!--                                        <div class="col">186</div>-->
+<!--                                        <div class="col">187</div>-->
+<!--                                        <div class="col">188</div>-->
+<!--                                        <div class="col">189</div>-->
+<!--                                        <div class="col">190</div>-->
+<!--                                        <div class="col">191</div>-->
+<!--                                        <div class="col">192</div>-->
+<!--                                        <div class="col">193</div>-->
+<!--                                        <div class="col">194</div>-->
+<!--                                        <div class="col">195</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">196</div>-->
+<!--                                        <div class="col">197</div>-->
+<!--                                        <div class="col">198</div>-->
+<!--                                        <div class="col">199</div>-->
+<!--                                        <div class="col">200</div>-->
+<!--                                        <div class="col">201</div>-->
+<!--                                        <div class="col">202</div>-->
+<!--                                        <div class="col">203</div>-->
+<!--                                        <div class="col">204</div>-->
+<!--                                        <div class="col">205</div>-->
+<!--                                        <div class="col">206</div>-->
+<!--                                        <div class="col">207</div>-->
+<!--                                        <div class="col">208</div>-->
+<!--                                        <div class="col">209</div>-->
+<!--                                        <div class="col">210</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col">211</div>-->
+<!--                                        <div class="col">212</div>-->
+<!--                                        <div class="col">213</div>-->
+<!--                                        <div class="col">214</div>-->
+<!--                                        <div class="col">215</div>-->
+<!--                                        <div class="col">216</div>-->
+<!--                                        <div class="col">217</div>-->
+<!--                                        <div class="col">218</div>-->
+<!--                                        <div class="col">219</div>-->
+<!--                                        <div class="col">220</div>-->
+<!--                                        <div class="col">221</div>-->
+<!--                                        <div class="col">222</div>-->
+<!--                                        <div class="col">223</div>-->
+<!--                                        <div class="col">224</div>-->
+<!--                                        <div class="col">225</div>-->
+<!--                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-            </div><!-- end content wrapper -->
+            </div>
             <footer>
                 <div class="footer-thanks">Thanks for attention</div>
             </footer>
         </div>
-    </div><!--end main wrapper-->
+    </div>
 </body>
 </html>

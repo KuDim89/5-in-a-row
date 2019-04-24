@@ -9,13 +9,13 @@ html {
   color: $mainFontColor;
   height: 100%;
   @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
+    font-size: 14px;
   }
   @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
+    font-size: 14px;
   }
   @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 }
 
@@ -44,15 +44,15 @@ ul, li {
 
 section, .section {
   position: relative;
-  padding: 40px 0;//padding: rem(40), 0
+  padding: rem(20) 0;
   @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
+    padding: rem(15) 0;
   }
   @media screen and (max-width: $tableWidth) {
-    padding: 28px 0;
+    padding: rem(13) 0;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: 20px 0;
+    padding: rem(10) 0;
   }
 }
 
