@@ -1,6 +1,8 @@
 @import "../utils/mixins";
 @import "../utils/fonts";
 @import "../utils/vars";
+@import "../utils/animate";
+
 
 .game {
   &-wrapper {
@@ -17,7 +19,7 @@
   }
   &-field{
     @include calcCol(1.44,rem(10));
-    @include flexRow(center, center);
+    @include flexCol(center, center);
     position: absolute;
     right:0;
     top:0;
@@ -28,6 +30,7 @@
 }
 
 .game-menu {
+  height: 100%;
   a{
     display: block;
   }
@@ -35,6 +38,27 @@
     display: block;
     margin-bottom: rem(20);
   }
+  &-timer {
+    @include fontChina(400, normal);
+    @include flexRow(center, center);
+    border-bottom: 1px solid $yellow-color;
+    margin-bottom: rem(30);
+    &-text {
+      @include fontSize(50);
+      text-transform: uppercase;
+      color: $yellow-color;
+      animation: animText 2s infinite alternate ease-in-out;
+    }
+    figure {
+      transform: scale(0.7);
+    }
+
+  }
+}
+
+.timer {
+  padding: rem(10);
+  @include fontSize(30);
 }
 
 .count-black,
@@ -50,18 +74,12 @@
   &-value{
     @include fontMontserrat(400, normal);
     @include fontSize(16);
-    margin-left: rem(40);
-  }
-}
-
-.count-black {
-  margin-bottom: rem(20);
-  &-icon {
-    background: radial-gradient(circle at rem(10) rem(10), $grey-color, $black-color);
+    margin-left: rem(32);
   }
 }
 
 .count-white {
+  margin-bottom: rem(20);
   &-icon {
     background: radial-gradient(circle at rem(10) rem(10), $white-color, $grey-color);
   }
@@ -70,8 +88,40 @@
   }
 }
 
+.count-black {
+  &-icon {
+    background: radial-gradient(circle at rem(10) rem(10), $grey-color, $black-color);
+  }
+}
+
+.game-img {
+  position: absolute;
+  background-image: radial-gradient(circle closest-side, $default-color, $primary-color);
+  border: 1px solid $yellow-color;
+  border-radius: 50%;
+  width: rem(150);
+  bottom: rem(40);
+  left: rem(28);
+  margin: 0;
+  img {
+    width: 100%;
+    padding: rem(5) 0;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
 .board {
   padding: rem(5);
+  &-text {
+    @include fontChina(400, normal);
+    @include fontSize(50);
+    position: relative;
+    top: rem(-15);
+    text-transform: uppercase;
+    color: $yellow-color;
+    animation: animText 2s infinite alternate ease-in-out;
+  }
   .row {
     @include flexRow(center, center);
     .col {
@@ -116,8 +166,6 @@
   }
 }
 
-
-
 .black,
 .white {
   content: "";
@@ -126,6 +174,10 @@
   height: rem(5);
   border-radius: 50%;
   box-shadow: 0 rem(5) rem(7) 0 rgba(0,0,0,0.30);
+}
+
+.col.white,
+.col.black{
   pointer-events: none;
 }
 

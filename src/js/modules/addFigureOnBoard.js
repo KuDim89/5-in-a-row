@@ -1,16 +1,14 @@
 import $ from 'jquery';
 import { createGameBoard } from './createBoardOnPage';
+import { timer, changeCount} from "./timerOnPage";
 
-const board = $('.board'),
-      newGame = $('.btn-default'),
-      playerBlack = $('.count-black-value'),
-      playerWhite = $('.count-white-value');
+const board = $('.board');
+
+
 let  newArr = [],
-     move = 0;
+     idElement;
 
-let idElement;
-
-board.on("click", function(e) {
+board.on("click", ".col", function(e){
     const localStorageObj = JSON.parse(window.localStorage.getItem('gameField'));
     const domIdElement = e.target.dataset.id;
     for(let i = 0; i < localStorageObj.length; i ++ ){
@@ -24,6 +22,8 @@ board.on("click", function(e) {
     }
     createGameBoard();
     gameMove();
+    changeCount(20);
+    timer();
 });
 
 function playerChange() {
@@ -50,17 +50,15 @@ function playerChange() {
             }
         }
     }
-    move++;
 }
 
 function gameMove() {
-    if(localStorage.getItem('gameMove') == null) {
-        //localStorage.setItem('gameMove', '0');
-        const gameMoveSerial = JSON.stringify(move);
-        localStorage.setItem('gameMove', gameMoveSerial);
+    if(localStorage.getItem('gameMove') === null) {
+        localStorage.setItem('gameMove', '1');
     } else  {
-        const gameMoveSerial = JSON.stringify(move);
-        localStorage.setItem('gameMove', gameMoveSerial);
+        const gameMoveParse =  JSON.parse(localStorage.getItem("gameMove"));
+        const gameMoveParseUpdate = gameMoveParse + 1;
+        localStorage.setItem('gameMove', gameMoveParseUpdate);
     }
 }
 
@@ -71,9 +69,3 @@ function localObj(){
         localStorage.setItem('gameField', gameBoardArrSerial);
     }
 }
-
-newGame.on( "click", function() {
-    move = 0;
-    playerBlack.html(0);
-    playerWhite.html(0);
-});

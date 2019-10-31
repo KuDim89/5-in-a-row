@@ -20,7 +20,6 @@ html {
 }
 
 body {
-  font-family: $mainFontSize;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -77,4 +76,8 @@ section, .section {
   @media screen and (max-width: $phoneWidth){
     max-width: $smPhoneWidth;
   }
+}
+
+.hide {
+  display: none;
 }

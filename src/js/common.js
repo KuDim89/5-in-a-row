@@ -7,3 +7,5 @@
 import "./modules/createSourceLocallStorageObj";
 import "./modules/addFigureOnBoard";
 import "./modules/clickOnButton";
+import "./modules/counterForPlayer"
+import "./modules/menuVisibility"
