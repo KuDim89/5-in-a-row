@@ -3,7 +3,6 @@
 @import "../utils/vars";
 @import "../utils/animate";
 
-
 .game {
   &-wrapper {
     @include flexRow(space-between, flex-start);
@@ -11,26 +10,38 @@
     background-color: $primary-color;
     height: calc(100vh - 169px);
     min-height: rem(420);
+    @media screen and (max-width: $phoneWidth) {
+      display: block;
+      padding: rem(10) rem(20);;
+    }
   }
   &-menu {
     padding: rem(10);
     margin: rem(10);
     @include calcCol(4, rem(10));
+    @media screen and (max-width: $phoneWidth) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
   }
   &-field{
     @include calcCol(1.44,rem(10));
-    @include flexCol(center, center);
-    position: absolute;
-    right:0;
-    top:0;
-    bottom:0;
+    @include flexRow(center, center);
+    @include centerAbsolute(0, 0, 0, auto);
     margin: rem(20) rem(20) rem(20) rem(10);
     border: 1px solid $yellow-color;
+    @media screen and (max-width: $phoneWidth) {
+      width: 100%;
+      min-height: 55%;
+      height: auto;
+      margin: 0;
+      position: static;
+    }
   }
 }
 
 .game-menu {
-  height: 100%;
   a{
     display: block;
   }
@@ -38,11 +49,26 @@
     display: block;
     margin-bottom: rem(20);
   }
+  &-inside {
+    @media screen and (max-width: $phoneWidth) {
+      @include flexRow(space-between, center);
+      margin-bottom: rem(40);
+      &.hide {
+        display: none;
+      }
+    }
+  }
+  //&-count {
+  //  @media screen and (max-width: $phoneWidth) {
+  //    @include flexRow(center, center);
+  //  }
+  //}
   &-timer {
     @include fontChina(400, normal);
     @include flexRow(center, center);
     border-bottom: 1px solid $yellow-color;
     margin-bottom: rem(30);
+    justify-content: space-between;
     &-text {
       @include fontSize(50);
       text-transform: uppercase;
@@ -51,6 +77,9 @@
     }
     figure {
       transform: scale(0.7);
+      @media screen and (max-width: 570px) {
+        display: none;
+      }
     }
 
   }
@@ -59,6 +88,10 @@
 .timer {
   padding: rem(10);
   @include fontSize(30);
+  width: rem(78);
+  @media screen and (max-width: 575px) {
+    @include fontSize(26);
+  }
 }
 
 .count-black,
@@ -70,11 +103,24 @@
     border-radius: 50%;
     margin: 0;
     box-shadow: 0 rem(5) rem(7) 0 rgba(0,0,0,0.30);
+    @media screen and (max-width: 540px) {
+      width: rem(20);
+      height: rem(20);
+    }
   }
   &-value{
     @include fontMontserrat(400, normal);
     @include fontSize(16);
     margin-left: rem(32);
+    @media screen and (max-width: 605px) {
+      margin-left: rem(14);
+    }
+    @media screen and (max-width: 505px) {
+      margin-left: rem(6);
+    }
+    @media screen and (max-width: $phoneWidth) {
+      min-width: rem(90);
+    }
   }
 }
 
@@ -97,12 +143,21 @@
 .game-img {
   position: absolute;
   background-image: radial-gradient(circle closest-side, $default-color, $primary-color);
-  border: 1px solid $yellow-color;
+  //border: 1px solid $yellow-color;
   border-radius: 50%;
   width: rem(150);
   bottom: rem(40);
   left: rem(28);
   margin: 0;
+  @media screen and (max-width: 575px) {
+    left: rem(14);
+  }
+  @media screen and (max-width: 505px) {
+    left: rem(2);
+  }
+  @media screen and (max-width: $phoneWidth){
+    display: none;
+  }
   img {
     width: 100%;
     padding: rem(5) 0;
@@ -121,6 +176,10 @@
     text-transform: uppercase;
     color: $yellow-color;
     animation: animText 2s infinite alternate ease-in-out;
+    @media screen and (max-width: $phoneWidth) {
+      @include fontSize(26);
+      top: 0;
+    }
   }
   .row {
     @include flexRow(center, center);
@@ -134,6 +193,10 @@
       margin: rem(2);
       border: 1px solid $yellow-color;
       transition: all .3s ease;
+      @media screen and (max-width: $phoneWidth) {
+        width: rem(14);
+        height: rem(14);
+      }
       &:hover {
         background: $yellow-color;
         transform: scale(1.3);

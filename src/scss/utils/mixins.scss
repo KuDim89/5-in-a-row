@@ -50,3 +50,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+@mixin centerAbsolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $right;
+  right: $bottom;
+  bottom: $bottom;
+  left:  $left;
+}

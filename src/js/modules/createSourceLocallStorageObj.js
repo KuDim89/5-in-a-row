@@ -20,7 +20,7 @@ function createLocalStorageObj(fieldDimension) {
         for (let j = 0; j < fieldDimension; j++) {
             gameBoardArr[i][j] = {
                 id: getRandomID(0, 1679615),
-                value: ""
+                value: "*"
             };
         }
     }

@@ -1,23 +1,35 @@
 import $ from 'jquery';
+import { modalShow } from "./modalWindow";
 
-let count = 20;
-let counter = setInterval(timer, 1000);
+const timerId = $("#timer");
 
-function changeCount(newCount) {
-    count = newCount;
+let counter,
+    count = 20;
 
+
+function runSetInterval() {
+    clearInterval(counter);
+    counter = setInterval(timer, 1000);
 }
 
 function timer() {
-
     count = count - 1;
     if (count < 0) {
+        modalShow();
         clearInterval(counter);
-        //counter ended, do something here
         return;
     }
-    $("#timer").html("00:" + count);
 
+    timerId.html("00:" + count);
 }
 
-export { timer, changeCount};
+function changeCount(newCount) {
+    count = newCount;
+}
+
+function clearTimer() {
+    clearInterval(counter);
+    count = 20;
+}
+
+export { runSetInterval, changeCount, clearTimer };

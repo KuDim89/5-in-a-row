@@ -5,6 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
     <title>Gomoku</title>
 </head>
 <body>
@@ -48,9 +51,9 @@
                                 </div>
                                 <div id="gameMenuInside" class="game-menu-inside hide">
                                     <div id="gameMenuTimer" class="game-menu-timer">
-                                        <figure class="count-white-icon"></figure>
-                                        <div id="timer" class="timer">00:20</div>
-                                        <figure class="count-black-icon"></figure>
+                                        <figure id="countWhiteIcon" class="count-white-icon"></figure>
+                                        <div id="timer" class="timer"></div>
+                                        <figure id="countBlackIcon" class="count-black-icon"></figure>
                                     </div>
                                     <div id="gameMenuCount" class="game-menu-count">
                                         <div class="count-white">
@@ -64,12 +67,12 @@
                                     </div>
                                 </div>
                                 <figure class="game-img">
-                                    <img src="assets/img/imgShadow/sticker4.png" alt="sticker">
+                                    <img src="#" alt="sticker">
                                 </figure>
                             </div>
                             <div class="game-field">
                                 <div id="boardText" class="board-text">Are you ready</div>
-                                <div id="board" class="board"></div>
+                                <div id="board" class="board hide-access"></div>
                             </div>
                         </div>
                     </div>
@@ -78,6 +81,20 @@
             <footer>
                 <div class="footer-thanks">Thanks for attention</div>
             </footer>
+        </div>
+    </div>
+    <div id="modalWinner" class="modal-winner">
+        <div class="modal-winner-body">
+            <div class="modal-winner-border">
+                <div class="modal-winner-title">Game over</div>
+                <div id="modalWinnerText" class="modal-winner-text"></div>
+                <div id="modalWinnerImg" class="modal-winner-img">
+                    <img src="#" alt="winner">
+                </div>
+                <div class="modal-winner-close">
+                    <a href="#" id="close" class="close">Close</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

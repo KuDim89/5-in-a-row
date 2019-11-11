@@ -2,10 +2,16 @@ import $ from "jquery";
 
 const groupBtnMenu = $("#gameMenuBtn"),
       boardText = $("#boardText"),
-      gameMenuInside = $("#gameMenuInside");
+      timer = $("#timer"),
+      gameMenuInside = $("#gameMenuInside"),
+      board = $("#board"),
+      countWhite = $("#countWhiteIcon"),
+      countBlack = $("#countBlackIcon");
 
 function menuActivity() {
-    let localStorageArray = JSON.parse(window.localStorage.getItem('gameField'));
+    const localStorageArray = JSON.parse(window.localStorage.getItem('gameField'));
+    timer.html("00:20");
+
     if(localStorageArray) {
         groupBtnMenu.addClass("hide");
         boardText.addClass("hide");
@@ -15,7 +21,26 @@ function menuActivity() {
     groupBtnMenu.removeClass("hide");
     boardText.removeClass("hide");
     gameMenuInside.addClass("hide");
+    board.removeClass("hide-access");
 }
 menuActivity();
 
-export { menuActivity };
+function showPlayingColor() {
+    const gameMove = JSON.parse(window.localStorage.getItem('gameMove'));
+
+    if (gameMove === null) {
+        countWhite.removeClass("opacity");
+        return;
+    }
+    if(gameMove %2 === 0) {
+        countWhite.removeClass("opacity");
+        countBlack.addClass("opacity");
+    } else {
+        countBlack.removeClass("opacity");
+        countWhite.addClass("opacity");
+    }
+}
+showPlayingColor();
+
+
+export { menuActivity, showPlayingColor};

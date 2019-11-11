@@ -1,14 +1,18 @@
 import $ from "jquery";
-import {createGameBoard} from "./createBoardOnPage";
-import {createLocalStorageObj, sourceLocalStorageObject} from "./createSourceLocallStorageObj";
-import {menuActivity} from "./menuVisibility"
-import { timer, changeCount } from "./timerOnPage";
+import { createGameBoard } from "./createBoardOnPage";
+import { createLocalStorageObj, sourceLocalStorageObject } from "./createSourceLocallStorageObj";
+import { menuActivity } from "./menuVisibility";
+import { clearTimer } from "./timerOnPage";
+import { showPlayingColor } from "./menuVisibility";
 
 
-const btnMenu = $('.btn-menu'),
-      newGame = $('#btnDefault'),
+const newGame = $('#btnDefault'),
       playerBlack = $('#countBlackValue'),
-      playerWhite = $('#countWhiteValue');
+      playerWhite = $('#countWhiteValue'),
+      board = $("#board"),
+      img = $('.game-img img'),
+      btnMenu = $('.btn-menu');
+
 
 btnMenu.on( "click", function() {
     const fieldDimension = $(this).attr('data-value');
@@ -16,8 +20,6 @@ btnMenu.on( "click", function() {
     sourceLocalStorageObject();
     createGameBoard();
     menuActivity();
-    changeCount(20);
-    timer();
 });
 
 
@@ -30,5 +32,9 @@ newGame.on( "click", function() {
     menuActivity();
     playerBlack.html("new game");
     playerWhite.html("new game");
+    img.attr('src',"assets/img/logo.png");
+    board.removeClass("hide-access");
+    clearTimer();
+    showPlayingColor();
 });
 

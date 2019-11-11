@@ -15,7 +15,7 @@ html {
     font-size: 14px;
   }
   @media screen and (max-width: $phoneWidth) {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 }
 
@@ -23,8 +23,10 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 300px;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -78,6 +80,23 @@ section, .section {
   }
 }
 
+
+//helper classes
 .hide {
   display: none;
+}
+
+.opacity {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.show {
+  display: block;
+}
+
+.hide-access {
+  pointer-events: none;
 }

@@ -13,6 +13,9 @@
   box-sizing: border-box;
   background: linear-gradient(90deg, #d2691e, #FFD019, #FF5219, #F5557F, #d2691e);
   background-size: 500%;
+  @media screen and (max-width: $phoneWidth) {
+    @include fontSize(13);
+  }
   &:hover {
     animation: buttonHoverAnimate 8s linear infinite;
     box-shadow: 2px 13px 17px -14px rgba(0, 0, 0, 0.5);
@@ -27,13 +30,14 @@
   @include fontMontserrat(400, normal);
   @include fontSize(16);
   margin-bottom: rem(15);
-  padding: rem(10) rem(40);
+  padding: rem(10) 0;
   text-align: center;
   color: $yellow-color;
   letter-spacing: rem(2);
   text-transform: uppercase;
   box-shadow: 0 20px 50px rgba(0,0,0,.5);
   overflow: hidden;
+  cursor: pointer;
   &:before{
     content: '';
     position: absolute;
@@ -112,5 +116,25 @@
         animation-delay: 1s;
       }
     }
+  }
+}
+
+.close {
+  @include fontSize(25);
+  border: 1px solid $yellow-color;
+  border-radius: 0 20px 0 20px;
+  color: $black-color;
+  padding: 0 20px;
+  transition: all .3s ease-out;
+  box-shadow: 0 rem(5) rem(7) 0 rgba(0,0,0,0.30);
+  &:hover {
+    @include fontSize(30);
+    border-radius: 20px 0 20px 0;
+    background: $yellow-color;
+    padding: 5px 25px;
+  }
+  &:active {
+    box-shadow: none;
+    color: $primary-color;
   }
 }

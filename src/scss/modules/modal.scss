@@ -1,0 +1,49 @@
+@import "../utils/mixins";
+@import "../utils/fonts";
+@import "../utils/vars";
+
+.modal-winner {
+  display: none;
+  @include centerAbsolute(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
+  margin: auto;
+
+  &-body {
+    @include centerAbsolute(0, 0, 0, 0);
+    max-width: rem(400);
+    width: 100%;
+    height: rem(340);
+    background: $primary-color;
+    margin: auto;
+  }
+
+  &-border {
+    @include fontChina(400, normal);
+    @include centerAbsolute(0, 0, 0, 0);
+    margin: rem(15);
+    border: 1px solid $yellow-color;
+  }
+
+  &-title {
+    @include flexRow(center, center);
+    @include fontSize(45);
+  }
+
+  &-text {
+    @include fontSize(25);
+    text-align: center;
+  }
+
+  &-img {
+    max-width: rem(110);
+    width: 100%;
+    margin: 0 auto rem(20);
+    img {
+      width: rem(100);
+    }
+  }
+
+  &-close {
+    @include flexRow(center, center);
+  }
+}

@@ -7,5 +7,10 @@
 import "./modules/createSourceLocallStorageObj";
 import "./modules/addFigureOnBoard";
 import "./modules/clickOnButton";
-import "./modules/counterForPlayer"
-import "./modules/menuVisibility"
+import "./modules/counterForPlayer";
+import "./modules/menuVisibility";
+import "./modules/modalWindow";
+
+
+//import "./modules/imgMove";
+import "./modules/checkWinner";

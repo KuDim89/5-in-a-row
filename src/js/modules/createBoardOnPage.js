@@ -11,10 +11,10 @@ function createGameBoard (){
             board.append(rowTemplate);
             for(let j = 0; j < localStorageArray[i].length; j++) {
                 const row = $('.row:last');
-                if (localStorageArray[i][j].value === "-") {
+                if (localStorageArray[i][j].value === "w") {
                     const colTemplate = `<div class="col white" data-id="${localStorageArray[i][j].id}"></div>`;
                     row.append(colTemplate);
-                } else if (localStorageArray[i][j].value === "+") {
+                } else if (localStorageArray[i][j].value === "b") {
                     const colTemplate = `<div class="col black" data-id="${localStorageArray[i][j].id}"></div>`;
                     row.append(colTemplate);
                 } else {
