@@ -7,17 +7,134 @@
   @include fontMontserrat(400, normal);
   @include fontSize(18);
   border: 2px solid $default-color;
-  border-radius: $button-height / 2;
+  border-radius: $button-big-height / 2;
   padding: rem(5) rem(20);
   color: $default-color;
   box-sizing: border-box;
   background: linear-gradient(90deg, #d2691e, #FFD019, #FF5219, #F5557F, #d2691e);
   background-size: 500%;
+  @media screen and (max-width: $phoneWidth) {
+    @include fontSize(13);
+  }
   &:hover {
     animation: buttonHoverAnimate 8s linear infinite;
-    box-shadow: 2px 13px 17px -14px rgba(0,0,0,0.5);
+    box-shadow: 2px 13px 17px -14px rgba(0, 0, 0, 0.5);
   }
   &:active {
     box-shadow: none;
+    animation-play-state: paused;
+  }
+}
+.btn-menu {
+  position: relative;
+  @include fontMontserrat(400, normal);
+  @include fontSize(16);
+  margin-bottom: rem(15);
+  padding: rem(10) 0;
+  text-align: center;
+  color: $yellow-color;
+  letter-spacing: rem(2);
+  text-transform: uppercase;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+  overflow: hidden;
+  cursor: pointer;
+  &:before{
+    content: '';
+    position: absolute;
+    top: rem(2);
+    left: rem(2);
+    bottom: rem(2);
+    width: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  span {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4){
+      position: absolute;
+      transition: all .3s ease;
+      opacity: 0;
+    }
+    &:nth-child(1),
+    &:nth-child(2){
+      top: 0;
+    }
+    &:nth-child(3),
+    &:nth-child(4){
+      left: 0;
+    }
+    &:nth-child(2),
+    &:nth-child(4){
+      width: rem(2);
+      height: 100%;
+    }
+    &:nth-child(1),
+    &:nth-child(3){
+      width: 100%;
+      height: rem(2);
+    }
+    &:nth-child(1) {
+      left: 0;
+      background: linear-gradient(to right, $primary-color, $yellow-color);
+    }
+    &:nth-child(2){
+      right: 0;
+      background: linear-gradient(to bottom, $primary-color, $yellow-color);
+    }
+    &:nth-child(3) {
+      bottom: 0;
+      background: linear-gradient(to left, $primary-color, $yellow-color);
+    }
+    &:nth-child(4) {
+      top: 0;
+      background: linear-gradient(to top, $primary-color, $yellow-color);
+    }
+  }
+  &:hover {
+    span{
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        opacity: 1;
+      }
+      &:nth-child(1) {
+        animation: snake1 2s linear infinite;
+      }
+      &:nth-child(2){
+        animation: snake2 2s linear infinite;
+      }
+      &:nth-child(3){
+        animation: snake3 2s linear infinite;
+      }
+      &:nth-child(4){
+        animation: snake4 2s linear infinite;
+      }
+      &:nth-child(2),
+      &:nth-child(4){
+        animation-delay: 1s;
+      }
+    }
+  }
+}
+
+.close {
+  @include fontSize(25);
+  border: 1px solid $yellow-color;
+  border-radius: 0 20px 0 20px;
+  color: $black-color;
+  padding: 0 20px;
+  transition: all .3s ease-out;
+  box-shadow: 0 rem(5) rem(7) 0 rgba(0,0,0,0.30);
+  &:hover {
+    @include fontSize(30);
+    border-radius: 20px 0 20px 0;
+    background: $yellow-color;
+    padding: 5px 25px;
+  }
+  &:active {
+    box-shadow: none;
+    color: $primary-color;
   }
 }

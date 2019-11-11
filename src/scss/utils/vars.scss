@@ -22,6 +22,12 @@ $danger-color: #fc5c65;
 $warning-color: #fed330;
 $light-color: #999999;
 $purple-color: #8854d0;
+$yellow-color: #FFD019;
+$black-color: #000000;
+$white-color: #ffffff;
+$grey-color: #808080;
+
+
 
 //Neutral color
 $neutral-primary: #303133;
@@ -30,14 +36,16 @@ $neutral-secondary: #909399;
 $neutral-placeholder: #C0C4CC;
 
 //Border color
+$border-color: #404040;
 $border-base: #DCDFE6;
 $border-light: #E4E7ED;
 $border-lighter: #EBEEF5;
 $border-lightex: #F2F6FC;
 
 //Button
-$button-height: rem(48);
-//$button-width: rem(100);
+$button-big-height: rem(48);
+$button-little-height: rem(35);
+
 
 
 

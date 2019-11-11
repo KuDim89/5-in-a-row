@@ -1,8 +1,55 @@
+@import "../utils/vars";
+
 @keyframes  buttonHoverAnimate {
   0% {
     background-position: 0%;
   }
   100% {
     background-position: 500%;
+  }
+}
+
+
+@keyframes snake1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes snake2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes snake3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes snake4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes animText {
+  from {
+    text-shadow: 0 0 10px transparent;
+    color: $primary-color;
+  }
+  to {
+    text-shadow: 0 28px 50px rgba(0, 0, 0, 1);
+    transform:translateY(-5px);
   }
 }

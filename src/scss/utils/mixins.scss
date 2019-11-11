@@ -35,6 +35,13 @@
   align-items: $vertical;
 }
 
+@mixin flexCol($horizontal, $vertical) {
+  display: flex;
+  justify-content: $horizontal;
+  flex-direction: column;
+  align-items: $vertical;
+}
+
 @mixin calcCol($count, $margin) {
   width: calc(#{(100 / $count) + unquote("%")} - #{$margin / 2});
 }
@@ -42,4 +49,12 @@
 @mixin verticalAlign() {
   top: 50%;
   transform: translateY(-50%);
+}
+
+@mixin centerAbsolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $right;
+  right: $bottom;
+  bottom: $bottom;
+  left:  $left;
 }
